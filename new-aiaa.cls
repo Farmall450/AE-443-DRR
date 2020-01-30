@@ -67,7 +67,7 @@
 
 
 \RequirePackage[explicit]{titlesec}
-\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thesection}{\arabic{section}}
 \renewcommand{\thesubsection}{\thesection.\Alph{subsection}}
 \renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
 \titleformat{\section}
