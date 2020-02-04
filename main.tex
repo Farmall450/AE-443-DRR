@@ -1,57 +1,63 @@
 \documentclass[conf]{new-aiaa}
 %\documentclass[journal]{new-aiaa} for journal papers
-\usepackage[utf8]{inputenc}
-
-\usepackage{graphicx}
-\usepackage{amsmath}
-\usepackage[version=4]{mhchem}
-\usepackage{siunitx}
-\usepackage{longtable,tabularx}
-\usepackage{xcolor}
-\setlength\LTleft{0pt} 
+\usepackage{preamble}
 
 \begin{document}
 
 \begin{titlepage}
     \begin{center}
         \vspace*{1cm}
-        \large
-        \textbf{TITLE} \\
+        {\LARGE \textbf{Design Readiness Report} \\
         \vspace{0.5cm}
-        \textbf{Team Name} \\
+        \textbf{Team Toucan}} \\
         \vspace{0.5cm}
-        \normalsize
+        {\normalsize
         \textbf{by} \\
         \vspace{0.5cm}
-        \textbf{Names} \\
+        \textbf{Chris Endres, Jack Johnson, Joshua Clements,\\ Kacper Piechnik, Mat Korzen and Nicole Zaworski} \\
         \vspace{0.5cm}
-        \textbf{Course Name}
+        \textbf{AE443 Senior Design II}\\
         \vspace{0.5cm}
-        \textbf{Date} \\
+        \textbf{February 13th, 2020}} \\
         \vspace{2.5cm}
+        {\Large
         $\bullet$\\
         \vspace{2.5cm}
         $\bullet$\\
         \vspace{2.5cm}
         $\bullet$\\
-        \vspace{1.75cm}
-        \textbf{Include drawings or team logo}
+        \vspace{1.75cm}}
+        \textbf{Include A/C drawings or team logo}
     \end{center}
 \end{titlepage}
 
 \newpage
 
 \pagenumbering{roman}
-\section{Group Member Assignments Sheet}
+\section*{Group Member Assignments Sheet}
+\begin{center}
+    \begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{1.5cm}|p{3cm}| }\toprule
+         \multicolumn{4}{c}{Team Roster} \\\midrule
+         Name & Primary Role(s) & Secondary Role(s) & AIAA ID & Signature \\\hline
+         
+         Chris Endres & Mass Properties; \newline Structures & Landing Gear & 1082820 & \\
+         Jack Johnson & Team Lead & Avionics & 761905 & \\ 
+         Joshua Clements & Aerodynamics; \newline Stability \& Control & Interior Design & 761967 & \\ 
+         Kacper Piechnik & Systems & Acoustics & 1108702 & \\ 
+         Mat Korzen & Loads and Dynamics; \newline Performance & ASM & 981691 & \\ 
+         Nicole Zaworski & Propulsion & Certification; Cost & 1108732 & \\\bottomrule 
+    \end{tabular}
+\end{center}
 
-\textcolor{red}{Include  a  list  of  team  members,  their  signatures,  and  primary  and  secondary  responsibilities.  Begin front matter pagination in Roman numerals on this page; i.e. i, ii, iii, iv, ...}
+% \textcolor{red}{Include a list of team members, their  signatures,  and  primary  and  secondary  responsibilities.  Begin front matter pagination in Roman numerals on this page; i.e. i, ii, iii, iv, ...}\\
+
 \newpage
 
 \tableofcontents
 
 \newpage
 
-\section{Nomenclature}
+\section*{Nomenclature}
 \hspace{-0.5in}\textbf{Coefficients}
 {\renewcommand\arraystretch{1.0}
 \noindent\begin{longtable*}{@{}l @{\quad=\quad} l@{}}
@@ -180,16 +186,13 @@
     % ZFW & Zero Fuel Weight\\
 \end{longtable*}}
 
-\newpage
-\section{List of Figures}
+\section*{List of Figures (Optional)}
 
 
-\newpage
-\section{List of Tables}
+\section*{List of Tables (Optional)}
 
-
-\newpage
-\section{Executive Summary}
+\newpage \setcounter{section}{0}
+\section{Executive Summary (Jack)}
 \textcolor{red}{
 \begin{itemize}
     \item Briefly discuss motivation for the aircraft, key requirements, and your design drivers.
@@ -199,8 +202,8 @@
     \item Maximum length: one page, single-spaced if necessary.
 \end{itemize}}
 
-\pagenumbering{arabic}
-\section{Introduction}
+\pagenumbering{arabic} % MODIFYING PAGINATION FROM ROMAN TO ARABIC
+\section{Introduction (Jack/Team)}
 \textcolor{red}{
 \begin{itemize}
     \item Discuss motivation, design objectives (e.g design drivers, key requirements), and a summary of key design characteristics and capabilities.
@@ -212,6 +215,10 @@
 \section{Concept of Operations}
 \textcolor{red}{
 \begin{itemize}
+    \item AIAA: A description of the design missions defined for the proposed concepts for use in
+calculations of mission performance as per design objectives. This includes the
+selection of cruise altitude(s) and cruise speed/cruise Mach supported by pertinent
+trade analyses and discussion.
     \item Discuss requirements (including those from the RFP and any additional derived requirements), constraints, and the design mission.
     \begin{itemize}
         \item Include a table of requirements.
@@ -220,7 +227,11 @@
 \end{itemize}}
 
 \section{Sizing Analysis}
+I have a pretty good/thorough analysis of this from my project. -Jack
 \textcolor{red}{\begin{itemize}
+    \item AIAA: A description or graphical representation of the aircraft sizing based on the
+requirements and design objectives given. This should describe or represent the
+quantitative justification for the wing area and thrust of the aircraft that was selected.
     \item Discuss the team’s similarity analysis and the rationale behind the aircraft selection.
     \item Discuss what data was extracted from the similarity analysis.
     \item Discuss a part by part build up and how it compares to the seed analysis
@@ -252,19 +263,32 @@
 \end{itemize}}
 
 \section{Propulsion}
+
+In order to create a basis for the engine choice, similar aircraft were examined and the engine choices that went into them. Aircraft such as the Boeing 777-300, \textbf{crap crap}, and \textbf{crap crap}.  
+
+Talk about decision to go with 2 turbofan engine. Talk about philosophy basing engine off of 737 MAX and 777 X and other similar aircraft. We want a high bypass engine. Composite blades. 
+
 \textcolor{red}{
 \begin{itemize}
     \item Discuss overall propulsion system philosophy/design/selection.
     \item Discuss future work.
+    \item AIAA: Propulsion system description and characterization including performance,
+    dimensions, and weights. The selection of the propulsion system(s), sizing, and
+    airframe integration must be supported by analysis, trade studies, and discussion
 \end{itemize}}
 
 \section{Aerodynamics}
+
+
+Will talk about supercritical airfoil analysis, run-through preliminary XFLR5 data, and general drag buildup. - Josh
 \textcolor{red}{
 \begin{itemize}
     \item Discuss wing design, including reasoning.
     \item Discuss high-lift system, including reasoning.
     \item Discuss drag buildup (tabulated) used to support sizing analysis.
     \item Discuss future work.
+    \item AIAA: Important aerodynamic characteristics and aerodynamic performance for key mission
+    segments and requirements (shared w/ aero)
 \end{itemize}}
 
 \section{Performance}
@@ -272,13 +296,21 @@
 \begin{itemize}
     \item Discuss performance analysis for takeoff and cruise supporting the sizing analysis.
     \item Discuss future work.
+    \item AIAA: Aircraft performance summaries shall be documented and the aircraft flight envelope
+    shall be shown graphically
+    \item AIAA: Payload range chart(s)
+    \item AIAA: Important aerodynamic characteristics and aerodynamic performance for key mission
+    segments and requirements (shared w/ aero)
 \end{itemize}}
 
-\section{Stability and Control}
+\section{Stability and Control (Optional)}
+Optional section, shall we include? -Josh
 \textcolor{red}{
 \begin{itemize}
     \item Discuss any analysis supporting the sizing analysis.
     \item Discuss future work.
+    \item AIAA: Summary of basic stability and control characteristics; this should include, but is not
+    limited to static margin, pitch, roll and yaw derivatives.
 \end{itemize}}
 
 \section{Structures and Loads}
@@ -286,17 +318,23 @@
 \begin{itemize}
     \item Discuss any analysis supporting the sizing analysis.
     \item Discuss future work.
+    \item AIAA: A V-n diagram for the aircraft with identification of necessary aircraft velocities and design load factors.
+    Required gust loads are specified in 14 Code of Federal Regulations (CFR) Part 25. (This may not come until later)
+    \item AIAA: Materials selection for main structural groups and general structural design, including layout of primary airframe structure as well as the strength capability of the structure
+    and how that compares to what is required at the ultimate load limits of the aircraft.
+    The maximum dive speed of the aircraft shall be specified. (this may not come until later)
 \end{itemize}}
 
 \section{Mass Properties}
 \textcolor{red}{
 \begin{itemize}
-    \item Dicuss any analysis supporting the sizing analysis.
+    \item Discuss any analysis supporting the sizing analysis.
     \begin{itemize}
         \item Mass property methods chosen for different parts of the aircraft.
         \item Estimate CG location.
     \end{itemize}
     \item Discuss future work.
+    \item AIAA: Aircraft weight statement, aircraft center-of-gravity envelope reflecting payloads and fuel allocation. Establish a forward and aft center of gravity (CG) limits for safe flight. (may come later...con't on AIAA doc)
 \end{itemize}}
 
 \section{Landing Gear}
@@ -306,18 +344,25 @@
     \item Discuss future work.
 \end{itemize}}
 
-\section{Systems}
+\section{Systems (Optional)}
 \textcolor{red}{
 \begin{itemize}
     \item Discuss any analysis supporting the sizing analysis.
     \item Discuss future work.
+    \item Complete geometric description, including dimensioned drawings, control surfaces
+    sizes and hinge locations, and internal arrangement of the aircraft illustrating
+    sufficient volume for all necessary components and systems. (May not come til later)
 \end{itemize}}
 
-\section{Cost Analysis}
+\section{Cost Analysis (Optional)}
 \textcolor{red}{
 \begin{itemize}
     \item Discuss any analysis supporting the sizing analysis.
     \item Discuss future work.
+    \item AIAA: Summary of cost estimate and a business case analysis. This assessment should
+    identify the cost groups and drivers, assumptions, and design choices aimed at the minimization of production costs. (con't on RFP)
+    \item AIAA: A lifecycle Carbon Dioxide (CO2) emission estimate. This estimate should include CO2
+    emissions from manufacturing the aircraft as well as CO2 emissions while in service. (could also go w/ prop)
 \end{itemize}}
 
 \section{Conclusion}
@@ -331,7 +376,10 @@
 \section{References}
 
 
-\section{Appendix}
+\section{Appendix (Optional)}
+
+\section{AIAA Requirements}
+...
 
 
 \end{document}
