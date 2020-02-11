@@ -1,0 +1,41 @@
+\textcolor{red}{
+\begin{itemize}
+    \item Discuss any analysis supporting the sizing analysis.
+    \item Discuss future work.
+    \item AIAA: A V-n diagram for the aircraft with identification of necessary aircraft velocities and design load factors.
+    Required gust loads are specified in 14 Code of Federal Regulations (CFR) Part 25. (This may not come until later)
+    \item AIAA: Materials selection for main structural groups and general structural design, including layout of primary airframe structure as well as the strength capability of the structure
+    and how that compares to what is required at the ultimate load limits of the aircraft.
+    The maximum dive speed of the aircraft shall be specified. (this may not come until later)
+\end{itemize}}
+
+\subsection{Structures}
+\subsubsection{Material Selection}
+Modern-age aircraft exhibit many different structure layouts and material selection for each structure. The goal for the material selection is to meet the given requirements, as well as provide an aircraft which will have the best mechanical properties for the given flight missions. The different structure types are tabulated in Table \ref{tab:structure_material_table}.
+
+\begin{table}[!h]
+\centering
+\caption{Structures Build-up Descriptions }
+\label{tab:structure_material_table}
+\begin{tabular}{ |p{2cm}|p{13cm}| }
+\hline
+\multicolumn{1}{|c|}{\textbf{Build-up Type}} & \multicolumn{1}{c|}{\textbf{Description}}                                                                                                                       \\ \hline
+Metal                                        & Most or all parts apart of the primary and secondary structure are metallic, such as aluminum, steel, and titanium                                              \\ \hline
+Composite                                    & Most or all parts apart of the primary and secondary structure are composite, such as carbon fiber reinforced polymers (CFRP), fiber glass, or other composites \\ \hline
+Hybrid                                       & Depending on the structure, the material of the structure is either metal or composite                                                                            \\ \hline
+\end{tabular}
+\end{table}
+% \begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{1.5cm}|p{3cm}| }
+
+Metallic build-up is the more traditional method of designing aircraft structure, where most or all primary structures is composed of metal alloys. This method of construction is typically cost-effective and weight efficient for most structures, however, there are downsides such as damage tolerance and fatigue. A composite build-up required high development costs, and relatively high manufacturing costs, but can offer incredible weight-savings compared to metal structure. \textcolor{red}{Find source for density to ultimate tensile strength} A hybrid build-up is a method where both metals and composites are used for different structures depending on key factors such as fatigue, damage tolerance, ultimate strength per density ratio, cost of manufacturing, assembly methods, and operational costs. Hybrid designs usually optimized costs and weight of the structure, which results in the wings and stabilizers to be a mainly composite build-up, where the fuselage and other secondary structures are metal build-up. 
+
+Hybrid construction is a newer technology, and as manufacturing of composites develops more, this style of construction may be used more. A notable aircraft which uses a hybrid build would be the B777-X, where the wings and stabilizers are composite, and the fuselage is metallic. The reason the fuselage is metallic and not composite comes down to the difficulties in manufacturing a round and continuous composite part, such as the fuselage sections on the B787. 
+
+In Table \ref{tab:structure_material_pugh}, the pros and cons for each build-up construction method were weighed in a Pugh matrix given the requirements of cost reduction and the desired aspect ratio and wingspan.
+
+%Insert pugh matrix
+
+Given the Pugh matrix, a hybrid construction is most ideal for the given aircraft requirements. A low fidelity analysis of the structure can assume isotropic properties with the mechanical properties of an ideal composite layup to create a factor to apply to estimations of structure loading given by Raymer (\textcolor{red}{find sources)}. A high fidelity analysis of the composite structure would require one of two methods: run FEA on an isotropic material with similar properties to an ideal composite layup, or run FEA with a specific composite build-up in a software such as ANSYS.
+
+\subsubsection{Construction}
+Given the 

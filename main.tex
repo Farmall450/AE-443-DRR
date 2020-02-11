@@ -1,6 +1,17 @@
-\documentclass[conf]{new-aiaa}
+ \documentclass[conf]{new-aiaa}
 %\documentclass[journal]{new-aiaa} for journal papers
 \usepackage{preamble}
+\usepackage{setspace}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[version=4]{mhchem}
+\usepackage{siunitx}
+\usepackage{longtable,tabularx}
+\usepackage{amsmath}
 
 \begin{document}
 
@@ -14,12 +25,13 @@
         {\normalsize
         \textbf{by} \\
         \vspace{0.5cm}
-        \textbf{Chris Endres, Jack Johnson, Joshua Clements,\\ Kacper Piechnik, Mat Korzen and Nicole Zaworski} \\
+        \textbf{Joshua Clements, Chris Endres, Jack Johnson,\\ Mateusz Korzen, Kacper Piechnik and Nicole Zaworski} \\
         \vspace{0.5cm}
-        \textbf{AE443 Senior Design II}\\
+        {\large\textbf{AE443 Senior Design II}}\\
         \vspace{0.5cm}
         \textbf{February 13th, 2020}} \\
         \vspace{2.5cm}
+        {\large University of Illinois at Urbana-Champaign \\ Department of Aerospace Engineering} \\ 
         {\Large
         $\bullet$\\
         \vspace{2.5cm}
@@ -27,363 +39,96 @@
         \vspace{2.5cm}
         $\bullet$\\
         \vspace{1.75cm}}
-        \textbf{Include A/C drawings or team logo}
+        {\normalsize
+        \textbf{Faculty Advisor:} Dr. Jason Merret}\\
+        \textcolor{red}{Include A/C drawings or team logo}
     \end{center}
 \end{titlepage}
 
 \newpage
 
 \pagenumbering{roman}
-\section*{Group Member Assignments Sheet}
+\section*{Group Member Assignments Sheet (JJ)}
 \begin{center}
     \begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{1.5cm}|p{3cm}| }\toprule
-         \multicolumn{4}{c}{Team Roster} \\\midrule
-         Name & Primary Role(s) & Secondary Role(s) & AIAA ID & Signature \\\hline
-         
+        %  \multicolumn{5}{c}{Team Roster} \\\midrule
+         \textbf{Name} & \textbf{Primary Role(s)} & \textbf{Secondary Role(s)} & \textbf{AIAA ID} & \textbf{Signature} \\\hline
          Chris Endres & Mass Properties; \newline Structures & Landing Gear & 1082820 & \\
          Jack Johnson & Team Lead & Avionics & 761905 & \\ 
          Joshua Clements & Aerodynamics; \newline Stability \& Control & Interior Design & 761967 & \\ 
          Kacper Piechnik & Systems & Acoustics & 1108702 & \\ 
-         Mat Korzen & Loads and Dynamics; \newline Performance & ASM & 981691 & \\ 
+         Mateusz Korzen & Loads \& Dynamics; \newline Performance & ASM & 981691 & \\ 
          Nicole Zaworski & Propulsion & Certification; Cost & 1108732 & \\\bottomrule 
     \end{tabular}
 \end{center}
 
-% \textcolor{red}{Include a list of team members, their  signatures,  and  primary  and  secondary  responsibilities.  Begin front matter pagination in Roman numerals on this page; i.e. i, ii, iii, iv, ...}\\
-
 \newpage
-
 \tableofcontents
 
 \newpage
 
-\section*{Nomenclature}
-\hspace{-0.5in}\textbf{Coefficients}
-{\renewcommand\arraystretch{1.0}
-\noindent\begin{longtable*}{@{}l @{\quad=\quad} l@{}}
-    AR & Aspect Ratio \\
-    % b & Wing Span \\
-    % c & Chord length \\
-    % $C_D$ & Wing Drag Coefficient \\
-    % $C_d$ & Airfoil Drag Coefficient \\
-    % $C_{D,i}$ & Induced Drag Coefficient \\
-    % $C_f$ & Skin Friction Coefficient \\
-    % $C_L$ & Wing Lift Coefficient \\
-    % $C_l$ & Airfoil Lift Coefficient \\
-    % e & Oswald Efficiency Factor \\
-    % FF & Form Factor Term for parasitic drag calculation \\
-    % g & Gravity (Earth = 9.81 $\frac{m}{s^2}$ \\
-    % $h_p$ & Pressure Altitude \\
-    % Isp & Specific Impulse \\
-    % K & Drag due to lift factor \\
-    % L/D & Lift to Drag ratio \\
-    % LE & Leading Edge \\
-    % M & Mach Number \\
-    % m & Total aircraft mass \\
-    % MAC & Mean aerodynamic chord \\
-    % $M_{cr}$ & Critical Mach number \\
-    % $M_{dd}$ & Drag Divergent Mach number \\
-    % n & Load factor \\
-    % Q & Interference factor for parasitic drag calculation \\
-    % $q_{\infty}$ & Dynamic pressure \\
-    % Re & Reynolds Number \\
-    % S & LE Suction \\
-    % $\mathcal{S}$ & Wing Area \\
-    % SFC & Specific fuel consumption \\
-    % T/W & Thrust-to-weight ratio \\
-    % t & Airfoil thickness \\
-    % t/c & Airfoil thickness-to-chord length ratio \\
-    % TE & Trailing Edge \\
-    % TO & Take-off \\
-    % $V_{NE}$ & Never Exceed Speed \\
-    % $V_{1}$ & TO Decision Speed \\
-    % $V_2$ & TO Safety Speed \\
-    % $W_e$ & Empty Weight\\
-    % $W_f$ & Fuel weight \\
-    % $W_o$ & TO Gross Weight \\
-    % W/S & Wing Loading \\
-\end{longtable*}}
-\hspace{-0.5in}\textbf{Greek Symbols}
-{\renewcommand\arraystretch{1.0}
-\noindent\begin{longtable*}{@{}l @{\quad=\quad} l@{}}
-    $\alpha$ & Angle of Attack \\
-    % $\beta$ & Prandtl-Glauert Compressibility correction \\
-    % $\delta_f$ & Flap Deflection \\
-    % $\Lambda$ & Sweep Angle \\
-    % $\epsilon$ & Unit Strain \\
-    % $\gamma$ & Shearing Strain \\
-    % $\Gamma$ & Wing Dihedral Angle \\
-    % $\eta$ & Efficiency \\
-    % $\lambda$ & Wing Taper Ratio ($C_{tip} / C_{root}$) \\
-    % $\mu$ & Viscosity \\
-    % $\rho$ & Air Density \\
-    % $\sigma$ & Air density ratio ($=\rho/\rho_o$) \\
-    % $\tau$ & Unit Shear Stress \\
-\end{longtable*}}
-\hspace{-0.5in}\textbf{Abbreviations and Acronyms}
-{\renewcommand\arraystretch{1.0}
-\noindent\begin{longtable*}{@{}l @{\quad=\quad} l@{}}
-    A/C & Aircraft \\
-    % AEI & All Engines Inoperative \\
-    % APU & Auxiliary Power Unit \\
-    % BFL & Balanced Field Length \\
-    % BL & Boundary Layer \\
-    % BPR & Turbofan engine bypass ratio \\
-    % CAD & Computer Aided Design \\
-    % CAS & Calibrated Airspeed \\
-    % CER & Cost Estimated Relationship \\
-    % CFD & Computational Fluid Dynamics \\
-    % CG & Center of Gravity \\
-    % ConOps & Concept of Operations \\
-    % CTOL & Conventional Take-off and Landing \\
-    % DARPA & Defense Advanced Research Projects Agency \\
-    % DoD & Department of Defense \\
-    % EAS & Equivalent Airspeed \\
-    % FAA & Federal Aviation Administration \\
-    % FAR & Federal Aviation Regulations (certification Spces) \\
-    % FAR & Federal Acquisition Regulations \\
-    % FBW & Fly By Wire \\
-    % FOD & Foreign Object Damage \\
-    % GA & General Aviation \\
-    % GPS & Global Positioning System \\
-    % IAS & Indicated Airspeed \\
-    % ICAO & International Civil Aviation Organization \\
-    % IFR & Instrument Flight Rules \\
-    % ILS & Instrument Landing System \\
-    % IPPD & Integrated Product and Process Development \\
-    % IR & Infrared \\
-    % IOS & International Standards Organization \\
-    % JATO & Jet-Assisted Take off \\
-    % KISS & KEEP IT SIMPLE, STUPID! (Ed Heinemmann) \\
-    % LCC & Life-cycle cost \\
-    % LOX & Liquid Oxygen \\
-    % L\&P & Leakage and Protuberances \\
-    % MDO & Multidisciplinary Design Optimization \\
-    % MSL & Mean Sea Level \\
-    % MTOW & Maximum Take-off Weight \\
-    % MZFW & Maximum Zero Fuel Weight \\
-    % NASA & National Aeronautics and Space Administration \\
-    % NAV & Navigation \\
-    % NS & Navier-Stokes (high-end CFD) \\
-    % OEM & Original Equipment Manufacturer \\
-    % OEI & One Engine Inoperative \\
-    % OML & Outer Mold Lines \\
-    % RCS & Radar Cross Section \\
-    % RCS & Reaction Control System \\
-    % RFI & Request for Information \\
-    % RFP & Request for Proposals \\
-    % RFQ & Request for Quotations \\
-    % RPM & Revolutions per Minute \\
-    % S\&C & Stability and Control \\
-    % SL & Sea Level \\
-    % SOP & Standard Operating Procedure \\
-    % STOL & Short Take-off and Landing \\
-    % TAS & True Airspeed \\
-    % TVC & Thrust Vector Control \\
-    % UAV & Unmanned Aerial Vehicle \\
-    % VFR & Visual Flight Rules \\
-    % VTOL & Vertical Take-off and Landing \\
-    % ZFW & Zero Fuel Weight\\
-\end{longtable*}}
+\section*{Nomenclature (\textit{JC})}
+\input{Sections/Nomenclature}
 
-\section*{List of Figures (Optional)}
-
-
-\section*{List of Tables (Optional)}
+% \section*{List of Figures (Optional)}
+% \section*{List of Tables (Optional)}
 
 \newpage \setcounter{section}{0}
-\section{Executive Summary (Jack)}
-\textcolor{red}{
-\begin{itemize}
-    \item Briefly discuss motivation for the aircraft, key requirements, and your design drivers.
-    \item Briefly  summarize the proposed aircraft, including key  characteristics (e.g. general configuration, TOGW, primary dimensions), key performance metrics, key differentiators, and a cost summary.
-    \item Include any requirements not met, struggling with, or have chosen to exceed.
-    \item Discuss the near term milestones and provide a project timeline for the semester.
-    \item Maximum length: one page, single-spaced if necessary.
-\end{itemize}}
+\doublespacing
+
+\section{Executive Summary (\textit{JJ})}
+\input{Sections/ExecutiveSummary}
 
 \pagenumbering{arabic} % MODIFYING PAGINATION FROM ROMAN TO ARABIC
-\section{Introduction (Jack/Team)}
-\textcolor{red}{
-\begin{itemize}
-    \item Discuss motivation, design objectives (e.g design drivers, key requirements), and a summary of key design characteristics and capabilities.
-    \item This section should identify your niche (i.e. who your target customers are), convince the reader to read the rest of the report, and provide context for the remaining discussion.
-    \item Discuss any unique attributes to your design philosophy.
-    \item Start pagination as: 1, 2, 3,...
-\end{itemize}}
 
-\section{Concept of Operations}
-\textcolor{red}{
-\begin{itemize}
-    \item AIAA: A description of the design missions defined for the proposed concepts for use in
-calculations of mission performance as per design objectives. This includes the
-selection of cruise altitude(s) and cruise speed/cruise Mach supported by pertinent
-trade analyses and discussion.
-    \item Discuss requirements (including those from the RFP and any additional derived requirements), constraints, and the design mission.
-    \begin{itemize}
-        \item Include a table of requirements.
-        \item Include a figure of the design mission with key mission segments labeled and details noted (e.g. cruise range and altitude).
-    \end{itemize}
-\end{itemize}}
+\section{Introduction (\textit{JJ})}
+\input{Sections/Introduction}
 
-\section{Sizing Analysis}
-I have a pretty good/thorough analysis of this from my project. -Jack
-\textcolor{red}{\begin{itemize}
-    \item AIAA: A description or graphical representation of the aircraft sizing based on the
-requirements and design objectives given. This should describe or represent the
-quantitative justification for the wing area and thrust of the aircraft that was selected.
-    \item Discuss the team’s similarity analysis and the rationale behind the aircraft selection.
-    \item Discuss what data was extracted from the similarity analysis.
-    \item Discuss a part by part build up and how it compares to the seed analysis
-    \item Discuss initial sizing and constraint analysis.
-    \begin{itemize}
-        \item Include a table of key parameters used with justification for their values.
-        \item Include discussion of modifications made to account for the hybrid-electric nature of your aircraft.
-        \item Include at least takeoff, landing, cruise, service ceiling, and loiter constraints.
-    \end{itemize}
-    \item Include at least two trade studies that uses quantitative analysis to support design decisions made.
-    \item Include the aircraft allocated and derived requirements and their justifications:
-    \begin{itemize}
-        \item $\frac{L}{D}$
-        \item $C_{L,max}$
-        \item SFC
-        \item Weights
-    \end{itemize}
-\end{itemize}}
+\section{Concept of Operations (\textit{JC, MK})}
+\input{Sections/Conops}
 
-\section{Configuration}
-\textcolor{red}{
-\begin{itemize}
-    \item Discuss external configuration alternatives considered and design choices made.
-    \item Discuss selected aircraft configuration design (i.e. distinctions between variants, major features, design characteristics/objectives).
-    \item Include at least one trade study that uses quantitative or qualitative analysis to support design decisions made.
-    \item Discuss the landing gear philosophy.
-    \item 3-View drawing (VSP acceptable).
-    \item Discuss future work
-\end{itemize}}
+\section{Sizing Analysis (\textit{KP})}
+\input{Sections/SizingAnalysis}
 
-\section{Propulsion}
+\section{Configuration (\textit{MK})}
+\input{Sections/Configuration}
 
-In order to create a basis for the engine choice, similar aircraft were examined and the engine choices that went into them. Aircraft such as the Boeing 777-300, \textbf{crap crap}, and \textbf{crap crap}.
+\section{Propulsion (\textit{NZ})}
+\input{Sections/Propulsion}
 
-The following engines, seen below, are used in similar aircraft with great success: \hl{\textbf{engine 1}, \textbf{engine 2}, and \textbf{engine 3}.} \textit{Proceed to describe the engines and the pros and cons of each}
+\newpage
+\section{Aerodynamics (\textit{JC})}
+\input{Sections/Aero}
 
-After initial sizing has been generated by the team, it will then be possible to use the generated values in order to form a power requirement guideline for the propulsion system. This power requirement will be the primary driver for the choice of an engine as it will ensure that the engine chosen is not overpowered and that it will perform as necessary as well.  
+\section{Performance (\textit{MK})}
+\input{Sections/Performance}
 
-Talk about decision to go with 2 turbofan engine. Talk about philosophy basing engine off of 737 MAX and 777 X and other similar aircraft. We want a high bypass engine. Composite blades.
+\section{Stability and Control (Optional/\textit{JC})}
+\input{Sections/StabandControl}
 
-\textcolor{red}{
-\begin{itemize}
-    \item Discuss overall propulsion system philosophy/design/selection.
-    \item Discuss future work.
-    \item AIAA: Propulsion system description and characterization including performance,
-    dimensions, and weights. The selection of the propulsion system(s), sizing, and
-    airframe integration must be supported by analysis, trade studies, and discussion
-\end{itemize}}
+\section{Structures and Loads (CE)}
+\input{Sections/StructuresAndLoads}
 
-\section{Aerodynamics}
+\section{Mass Properties (CE)}
+\input{Sections/MassProps}
 
+\section{Landing Gear (CE, JJ)}
+\input{Sections/LandingGear}
 
-Will talk about supercritical airfoil analysis, run-through preliminary XFLR5 data, and general drag buildup. - Josh
-\textcolor{red}{
-\begin{itemize}
-    \item Discuss wing design, including reasoning.
-    \item Discuss high-lift system, including reasoning.
-    \item Discuss drag buildup (tabulated) used to support sizing analysis.
-    \item Discuss future work.
-    \item AIAA: Important aerodynamic characteristics and aerodynamic performance for key mission
-    segments and requirements (shared w/ aero)
-\end{itemize}}
+\section{Systems (Optional (\textit{KP}))}
+\input{Sections/Systems}
 
-\section{Performance}
-\textcolor{red}{
-\begin{itemize}
-    \item Discuss performance analysis for takeoff and cruise supporting the sizing analysis.
-    \item Discuss future work.
-    \item AIAA: Aircraft performance summaries shall be documented and the aircraft flight envelope
-    shall be shown graphically
-    \item AIAA: Payload range chart(s)
-    \item AIAA: Important aerodynamic characteristics and aerodynamic performance for key mission
-    segments and requirements (shared w/ aero)
-\end{itemize}}
+\section{Cost Analysis (Optional/\textit{NZ})}
+\input{Sections/Cost}
 
-\section{Stability and Control (Optional)}
-Optional section, shall we include? -Josh
-\textcolor{red}{
-\begin{itemize}
-    \item Discuss any analysis supporting the sizing analysis.
-    \item Discuss future work.
-    \item AIAA: Summary of basic stability and control characteristics; this should include, but is not
-    limited to static margin, pitch, roll and yaw derivatives.
-\end{itemize}}
+\section{Conclusion (\textit{JJ})}
+\input{Sections/Conclusion}
 
-\section{Structures and Loads}
-\textcolor{red}{
-\begin{itemize}
-    \item Discuss any analysis supporting the sizing analysis.
-    \item Discuss future work.
-    \item AIAA: A V-n diagram for the aircraft with identification of necessary aircraft velocities and design load factors.
-    Required gust loads are specified in 14 Code of Federal Regulations (CFR) Part 25. (This may not come until later)
-    \item AIAA: Materials selection for main structural groups and general structural design, including layout of primary airframe structure as well as the strength capability of the structure
-    and how that compares to what is required at the ultimate load limits of the aircraft.
-    The maximum dive speed of the aircraft shall be specified. (this may not come until later)
-\end{itemize}}
+% \section{Appendix (Optional)}
 
-\section{Mass Properties}
-\textcolor{red}{
-\begin{itemize}
-    \item Discuss any analysis supporting the sizing analysis.
-    \begin{itemize}
-        \item Mass property methods chosen for different parts of the aircraft.
-        \item Estimate CG location.
-    \end{itemize}
-    \item Discuss future work.
-    \item AIAA: Aircraft weight statement, aircraft center-of-gravity envelope reflecting payloads and fuel allocation. Establish a forward and aft center of gravity (CG) limits for safe flight. (may come later...con't on AIAA doc)
-\end{itemize}}
+% \section{AIAA Requirements}
+% \input{Sections/Requirements}
 
-\section{Landing Gear}
-\textcolor{red}{
-\begin{itemize}
-    \item Discuss landing gear placement and design approach.
-    \item Discuss future work.
-\end{itemize}}
-
-\section{Systems (Optional)}
-\textcolor{red}{
-\begin{itemize}
-    \item Discuss any analysis supporting the sizing analysis.
-    \item Discuss future work.
-    \item Complete geometric description, including dimensioned drawings, control surfaces
-    sizes and hinge locations, and internal arrangement of the aircraft illustrating
-    sufficient volume for all necessary components and systems. (May not come til later)
-\end{itemize}}
-
-\section{Cost Analysis (Optional)}
-\textcolor{red}{
-\begin{itemize}
-    \item Discuss any analysis supporting the sizing analysis.
-    \item Discuss future work.
-    \item AIAA: Summary of cost estimate and a business case analysis. This assessment should
-    identify the cost groups and drivers, assumptions, and design choices aimed at the minimization of production costs. (con't on RFP)
-    \item AIAA: A lifecycle Carbon Dioxide (CO2) emission estimate. This estimate should include CO2
-    emissions from manufacturing the aircraft as well as CO2 emissions while in service. (could also go w/ prop)
-\end{itemize}}
-
-\section{Conclusion}
-\textcolor{red}{
-\begin{itemize}
-    \item Summarize your motivation, design objectives, proposed design, key performance metrics, and key differentiators.
-    \item Discuss problems encountered (e.g. requirements not met) and recommendations for future study (if any).
-    \item Summarize future work.
-\end{itemize}}
-
-\section{References}
-
-
-\section{Appendix (Optional)}
-
-\section{AIAA Requirements}
-...
-
+\bibliography{references.bib}
 
 \end{document}

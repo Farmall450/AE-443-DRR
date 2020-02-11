@@ -69,7 +69,7 @@
 \RequirePackage[explicit]{titlesec}
 \renewcommand{\thesection}{\arabic{section}}
 \renewcommand{\thesubsection}{\thesection.\Alph{subsection}}
-\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\roman{subsubsection}}
 \titleformat{\section}
   {\large\bfseries\singlespacing\centering}
   {\thesection.\space}{0pt}{#1}[]
