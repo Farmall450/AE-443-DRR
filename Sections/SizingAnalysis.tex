@@ -1,4 +1,4 @@
-The initial sizing analysis was conducted by examining a variety of similar aircraft and making sure to satisfy all the requirements given by the RFP. Some of the analyzed aircraft included the Boeing 777-200, Boeing 787-100, Airbus A340-600, and the Lockheed L-1011-100, which all contained similar capacities and ranges. Ultimately, the Boeing 777-200 was chosen as the main seed aircraft due to its similar range to the RFP requirement, and its large cabin size. Some key parameters derived from seed analysis are presented in Table \ref{tab:req}. 
+The initial sizing analysis was conducted by examining a variety of similar aircraft and making sure to satisfy all the requirements given by the AIAA RFP \cite{RFP}. Some of the analyzed aircraft included the Boeing 777-200, Boeing 787-100, Airbus A340-600, and the Lockheed L-1011-100, which all featured similar capacities and ranges.  Once compiled, the aircraft were assigned a quantitative rank from one to seven based on  capacity and range. Sorting by composite score, the Boeing 777-200 was chosen as the main seed aircraft due to its highest perceived similarity to a hypothetical plane developed for the RFP.  Some key parameters derived from seed analysis and RFP mandates are presented in Table \ref{tab:req}; a list of all candidate aircraft considered in the sizing analysis are listed in Table \ref{tabmk1}, as the same subjects were used in the Section \ref{section: Configuration} trade study.
 
 \begin{table}[h!] 
     \centering
@@ -11,7 +11,7 @@ The initial sizing analysis was conducted by examining a variety of similar airc
     Landing Field Length & 9,000 ft \\\hline
     Cruise Speed & 487 kts\\\hline
     Cruise Altitude & 37,000 ft \\\hline
-    Max Takeoff Weight & 580,900 lb\\\hline 
+    Max Takeoff Weight & 550,000 lb\\\hline 
     L/D & 17.83\\\hline 
     $C_{L_{max}}$ & 1.65\\\hline 
     SFC & 0.65\\\hline 
@@ -19,38 +19,41 @@ The initial sizing analysis was conducted by examining a variety of similar airc
     \end{tabular}\label{tab:req}
 \end{table}
 
-Parameters that were not able to be compiled from the similarity analysis were approximated by taking historic averages of different analyzed aircraft. Parameters such as cruise speed, were estimated by assuming an average cruise Mach of .85, while cruise altitude was estimated by taking averages of similar aircraft. Many other sizing parameters, specifically the wing geometries, were calculated using equations from Raymer. With all estimated parameters, an iterative process was used with a sizing spreadsheet to converge all sizing values for the Sam Mark I. The aircraft's weights were calculated using a build up method. Instead of taking the seed aircraft's weights, equations from Raymer and Roskom were utilized to build up each aircraft part weight. A trade study was also conducted for some key sizing parameters to make sure that the Sam Mark I has enough room for the designed seat arrangement. The trade study is demonstrated in Table \ref{tab:req}.
+Parameters compiled from the similarity analysis were approximated by taking historic averages of those respective to the different analyzed aircraft. Preliminary cruise speed was obtained by assuming an average cruise Mach of 0.9, while initial cruise altitude was estimated by taking averages of similar aircraft. Many other sizing parameters, specifically the wing geometries, were calculated using equations from Raymer \cite{raymer}. With all estimated parameters, an iterative process was used with a sizing spreadsheet to converge all sizing values for the initial Sam Mark I. These step was necessary due to the significant differences in range from all contemporary widebody, 300+ capacity commercial aircraft which could have been used as a seed.  The aircraft's weights were roughly calculated using a build up method, instead of taking the seed aircraft's weights, equations from Raymer \cite{raymer} and an initial assumption of 75,000 lb of fuel. A separate trade study was also conducted to address some key sizing parameters regarding the aircraft's fuselage to make sure that the Sam Mark I featured enough room for the designed seating arrangement. The trade study is demonstrated in Table \ref{tab:trade_params}.
 
 \begin{table}[h!] 
     \centering
     \caption{Trade Study}
     \begin{tabular}{ |c||c||c| }\toprule
     \textbf{Aircraft} & \textbf{Fuselage Length [ft]} & \textbf{Max Takeoff Weight [lb]} \\\hline\hline
-    Boeing 777-200 & 205.7 & 535,087.3  \\\hline
-    Boeing 787-100 & 224 & 560,000  \\\hline
-    Lockheed L-1011-100 & 177.8 & 466,079.6  \\\hline
+    Boeing 777-200 & 205.7 & 535,087  \\\hline
+    Boeing 787-100 & 224.0 & 560,000  \\\hline
+    Lockheed L-1011-100 & 177.8 & 466,079  \\\hline
     Airbus A340-600 & 228.2 & 390,307  \\\hline
 
-    \end{tabular}\label{tab:req}
+    \end{tabular}\label{tab:trade_params}
 \end{table}
 
-After analyzing multiple aircraft, a fuselage length of 240 ft was decided in order to hold more passengers than the Boeing 777-200, and to support a 3-4-3 seat arrangement. After utilizing a weight build up method, a max takeoff weight of 580,900 lb was calculated, which is about 50,000 lb heavier than the main seed aircraft. 
+\newpage
+
+After analyzing multiple aircraft, a fuselage length of 210 ft was decided in order to hold more passengers than the Boeing 777-200, and to support a 3-4-3 economy seat arrangement. After utilizing a weight build up method, a max takeoff weight of 550,000 lb was calculated, which is about 15,000 lb heavier than the main seed aircraft. 
+
+\hl{Orphan/widow below} -- close w/ below text 
 
 \textcolor{red}{\begin{itemize}
     \item AIAA: A description or graphical representation of the aircraft sizing based on the
-requirements and design objectives given. This should describe or represent the
-quantitative justification for the wing area and thrust of the aircraft that was selected.
-    \item Discuss the team’s similarity analysis and the rationale behind the aircraft selection.
-    \item Discuss what data was extracted from the similarity analysis.
-    \item Discuss a part by part build up and how it compares to the seed analysis
-    \item Discuss initial sizing and constraint analysis.
+requirements and design objectives given. \hl{This should describe or represent the
+quantitative justification for the wing area and thrust of the aircraft that was selected.} 
+    \item Discuss the team’s similarity analysis and the rationale behind the aircraft selection. \checkmark JJ
+    \item Discuss what data was extracted from the similarity analysis. \checkmark JJ
+    \item Discuss a part by part build up and how it compares to the seed analysis \checkmark JJ
+    \item Discuss initial sizing and constraint analysis. 
     \begin{itemize}
-        \item Include a table of key parameters used with justification for their values.
-        \item Include discussion of modifications made to account for the hybrid-electric nature of your aircraft.
-        \item Include at least takeoff, landing, cruise, service ceiling, and loiter constraints.
+        \item Include a table of key parameters used with justification for their values. \checkmark JJ
+        \item Include at least takeoff, landing, cruise, service ceiling, and \hl{loiter constraints.}
     \end{itemize}
-    \item Include at least two trade studies that uses quantitative analysis to support design decisions made.
-    \item Include the aircraft allocated and derived requirements and their justifications:
+    \item Include at least two trade studies that uses quantitative analysis to support design decisions made. \hl{I split into the sizing \& then fuse sizing as the "second" one}  Maybe tie into the trade study Mat outlined right below? I put a possible bridge in the first paragraph to it if you want to go that route. 
+    \item Include the aircraft allocated and derived requirements and their justifications: \hl{(I think he might want this for all of the planes we used? Open to interpretation)}
     \begin{itemize}
         \item $\frac{L}{D}$
         \item $C_{L,max}$

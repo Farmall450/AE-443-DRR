@@ -1,19 +1,24 @@
 \ProvidesPackage{preamble}
 
-\usepackage{amsmath}
+\usepackage{amsmath,amssymb}
 \usepackage{booktabs}
 \usepackage{fancyhdr}
+\usepackage{float}
 \usepackage{etoolbox}
 \usepackage{gensymb,graphicx}
 \usepackage{longtable}
+\usepackage{mathpazo} % Palatino font
+\usepackage{setspace}
 \usepackage{siunitx,subcaption}
 \usepackage{soul}
 \usepackage[table]{xcolor}
 \usepackage{tabto,tabu,tabularx}
+\usepackage{trimclip}
 \usepackage[utf8]{inputenc}
 \usepackage[version=4]{mhchem}
 \usepackage{wrapfig}
 \usepackage{xcolor}
+
 \setlength\LTleft{0pt} 
 
 \pagestyle{fancy}
@@ -31,7 +36,7 @@
      urlcolor = blue
      }
 \definecolor{cobalt}{rgb}{0.0, 0.28, 0.67}
-
+\def\AR{\clipbox{0pt 0pt .32em 0pt}\AE\kern-.30emR}
 
 % Can add packages:
 % \usepackage{amsmath,amssymb,amsthm,array}

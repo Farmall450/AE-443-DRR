@@ -1,15 +1,99 @@
+\hspace{-0.5in}\textbf{Abbreviations and Acronyms}
+{\renewcommand\arraystretch{1.0}
+\noindent\begin{longtable*}{@{}l @{\quad=\quad} l@{}}
+    A/C & Aircraft \\
+    AIAA & American Institute of Aeronautics and Astronautics \\
+    AR & Aspect Ratio \\
+    % AEI & All Engines Inoperative \\
+    % APU & Auxiliary Power Unit \\
+    % BFL & Balanced Field Length \\
+    % BL & Boundary Layer \\
+    % BPR & Turbofan engine bypass ratio \\
+    % CAD & Computer Aided Design \\
+    % CAS & Calibrated Airspeed \\
+    % CER & Cost Estimated Relationship \\
+    CFD & Computational Fluid Dynamics \\
+    CFR & Code of Federal Regulations \\
+    CG & Center of Gravity \\
+    ConOps & Concept of Operations \\
+    % CTOL & Conventional Take-off and Landing \\
+    % DARPA & Defense Advanced Research Projects Agency \\
+    % DoD & Department of Defense \\
+    % EAS & Equivalent Airspeed \\
+    FAA & Federal Aviation Administration \\
+    FEA & Finite Element Analysis \\
+    FAR & Federal Aviation Regulations (certification specs) \\
+    % FAR & Federal Acquisition Regulations \\
+    % FBW & Fly By Wire \\
+    % FOD & Foreign Object Damage \\
+    FLXXX & Flight Level of XXX Hundreds of Feet \\
+    ft & Foot \\
+    % GA & General Aviation \\
+    % GPS & Global Positioning System \\
+    % IAS & Indicated Airspeed \\
+    % ICAO & International Civil Aviation Organization \\
+    IFR & Instrument Flight Rules \\
+    % ILS & Instrument Landing System \\
+    % IPPD & Integrated Product and Process Development \\
+    % IR & Infrared \\
+    % IOS & International Standards Organization \\
+    % JATO & Jet-Assisted Take off \\
+    % KISS & KEEP IT SIMPLE, STUPID! (Ed Heinemmann) \\
+    % LCC & Life-cycle cost \\
+    % LOX & Liquid Oxygen \\
+    % L\&P & Leakage and Protuberances \\
+    % MDO & Multidisciplinary Design Optimization \\
+    % MSL & Mean Sea Level \\
+    in & inch \\
+    ISA & International Standard Atmosphere \\
+    KCAS & Knots Calibrated Airspeed \\
+    KEAS & Knots Equivalent Airspeed \\
+    kts & Knots \\
+    lb & Pound \\
+    MTOW & Maximum Take-off Weight \\
+    % MZFW & Maximum Zero Fuel Weight \\
+    % NASA & National Aeronautics and Space Administration \\
+    % NAV & Navigation \\
+    nm & nautical mile \\
+    % NS & Navier-Stokes (high-end CFD) \\
+    % OEM & Original Equipment Manufacturer \\
+    % OEI & One Engine Inoperative \\
+    % OML & Outer Mold Lines \\
+    % RCS & Radar Cross Section \\
+    % RCS & Reaction Control System \\
+    % RFI & Request for Information \\
+    RFP & Request for Proposals \\
+    % RFQ & Request for Quotations \\
+    % RPM & Revolutions per Minute \\
+    % S\&C & Stability and Control \\
+    % SL & Sea Level \\
+    % SOP & Standard Operating Procedure \\
+    % STOL & Short Take-off and Landing \\
+    % TAS & True Airspeed \\
+    % TVC & Thrust Vector Control \\
+    % UAV & Unmanned Aerial Vehicle \\
+    VFR & Visual Flight Rules \\
+    % VTOL & Vertical Take-off and Landing \\
+    % ZFW & Zero Fuel Weight\\
+\end{longtable*}}
+
 \hspace{-0.5in}\textbf{Coefficients}
 {\renewcommand\arraystretch{1.0}
 \noindent\begin{longtable*}{@{}l @{\quad=\quad} l@{}}
     b & Wing Span \\
     c & Chord length \\
     $C_D$ & Wing Drag Coefficient \\
-    % $C_d$ & Airfoil Drag Coefficient \\
-    % $C_{D,i}$ & Induced Drag Coefficient \\ %will this later apply to the whole plane?
-    % $C_f$ & Skin Friction Coefficient \\
+    $C_d$ & Airfoil Drag Coefficient \\
+    $C_{D,i}$ & Induced Drag Coefficient \\ %will this later apply to the whole plane?
+    $C_{D,0}$ & Zero-Lift Drag / Parasitic Drag \\
+    $C_{D,W_{NL}}$ & Wave Drag due to shock induced on non-lift generating surfaces \\
+    $C_{D,W_{L}}$ & Wave Drag due to shock induced on lift generating surfaces \\
+    $C_{D_{EXCR}}$ & Drag due to surface roughness \\
+    $C_{D,trim}$ & Drag due to Trim surfaces \\
+    $C_f$ & Skin Friction Coefficient \\
     $C_L$ & Wing Lift Coefficient \\ %will this later apply to the whole plane?
-    % $C_l$ & Airfoil Lift Coefficient \\
-    % e & Oswald Efficiency Factor \\
+    $C_l$ & Airfoil Lift Coefficient \\
+    e & Oswald Efficiency Factor \\
     % FF & Form Factor Term for parasitic drag calculation \\
     % g & Gravity (Earth = 9.81 $\frac{m}{s^2}$ \\
     $h_p$ & Pressure Altitude \\
@@ -59,74 +143,4 @@
     % $\sigma$ & Air density ratio ($=\rho/\rho_o$) \\
     % $\tau$ & Unit Shear Stress \\
 \end{longtable*}}
-\hspace{-0.5in}\textbf{Abbreviations and Acronyms}
-{\renewcommand\arraystretch{1.0}
-\noindent\begin{longtable*}{@{}l @{\quad=\quad} l@{}}
-    A/C & Aircraft \\
-    AIAA & American Institute of Aeronautics and Astronautics \\
-    AR & Aspect Ratio \\
-    % AEI & All Engines Inoperative \\
-    % APU & Auxiliary Power Unit \\
-    % BFL & Balanced Field Length \\
-    % BL & Boundary Layer \\
-    % BPR & Turbofan engine bypass ratio \\
-    % CAD & Computer Aided Design \\
-    % CAS & Calibrated Airspeed \\
-    % CER & Cost Estimated Relationship \\
-    CFD & Computational Fluid Dynamics \\
-    CFR & Code of Federal Regulations \\
-    CG & Center of Gravity \\
-    ConOps & Concept of Operations \\
-    % CTOL & Conventional Take-off and Landing \\
-    % DARPA & Defense Advanced Research Projects Agency \\
-    % DoD & Department of Defense \\
-    % EAS & Equivalent Airspeed \\
-    FAA & Federal Aviation Administration \\
-    FEA & Finite Element Analysis \\
-    FAR & Federal Aviation Regulations (certification Spces) \\
-    % FAR & Federal Acquisition Regulations \\
-    % FBW & Fly By Wire \\
-    % FOD & Foreign Object Damage \\
-    ft & foot \\
-    % GA & General Aviation \\
-    % GPS & Global Positioning System \\
-    % IAS & Indicated Airspeed \\
-    % ICAO & International Civil Aviation Organization \\
-    IFR & Instrument Flight Rules \\
-    % ILS & Instrument Landing System \\
-    % IPPD & Integrated Product and Process Development \\
-    % IR & Infrared \\
-    % IOS & International Standards Organization \\
-    % JATO & Jet-Assisted Take off \\
-    % KISS & KEEP IT SIMPLE, STUPID! (Ed Heinemmann) \\
-    % LCC & Life-cycle cost \\
-    % LOX & Liquid Oxygen \\
-    % L\&P & Leakage and Protuberances \\
-    % MDO & Multidisciplinary Design Optimization \\
-    % MSL & Mean Sea Level \\
-    MTOW & Maximum Take-off Weight \\
-    % MZFW & Maximum Zero Fuel Weight \\
-    % NASA & National Aeronautics and Space Administration \\
-    % NAV & Navigation \\
-    nm & nautical mile \\
-    % NS & Navier-Stokes (high-end CFD) \\
-    % OEM & Original Equipment Manufacturer \\
-    % OEI & One Engine Inoperative \\
-    % OML & Outer Mold Lines \\
-    % RCS & Radar Cross Section \\
-    % RCS & Reaction Control System \\
-    % RFI & Request for Information \\
-    RFP & Request for Proposals \\
-    % RFQ & Request for Quotations \\
-    % RPM & Revolutions per Minute \\
-    % S\&C & Stability and Control \\
-    % SL & Sea Level \\
-    % SOP & Standard Operating Procedure \\
-    % STOL & Short Take-off and Landing \\
-    % TAS & True Airspeed \\
-    % TVC & Thrust Vector Control \\
-    % UAV & Unmanned Aerial Vehicle \\
-    VFR & Visual Flight Rules \\
-    % VTOL & Vertical Take-off and Landing \\
-    % ZFW & Zero Fuel Weight\\
-\end{longtable*}}
+

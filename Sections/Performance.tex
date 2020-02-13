@@ -1,14 +1,19 @@
-\textcolor{red}{
-\begin{itemize}
-    \item Discuss performance analysis for takeoff and cruise supporting the sizing analysis.
-    \item Discuss future work.
-    \item AIAA: Aircraft performance summaries shall be documented and the aircraft flight envelope
-    shall be shown graphically
-    \item AIAA: Payload range chart(s)
-    \item AIAA: Important aerodynamic characteristics and aerodynamic performance for key mission
-    segments and requirements (shared w/ aero)
-\end{itemize}}
 
-The AIAA RFP \cite{RFP} requires this short range aircraft to have a range of at least 3,500 nm plus sufficient reserves while carrying a maximum of 400 passengers, a flight crew of 10, as well as their combined baggage.  Furthermore, both takeoff and landing distances are restrained to 9,000 ft or less off asphalt or concrete runways.  First-cut analysis was performed using an estimated empty weight as well as a fuel weight calculated by using a TSFC average of contemporary large turbofan engines, such as what would be found on an aircraft of this size.  This data was then input into an iterative spreadsheet to converge on an optimal design for a bounded range.  For this approximation, cruise altitude began at FL370 following by XYZ subsequent step climbs.  Climb, descent, and loiter follow the mission profile in <<section of conops>> per FAA requirements (? or however originally determined).  Elaborate expected performance
+\subsection{Mandatory Performance (\textit{JJ, MK})}
+The AIAA RFP \cite{RFP} requires this short range aircraft to have a maximum range of 3,500 nm while having the ability to carry a maximum capacity of 400 passengers in a dual class configuration. The aircraft must also have enough reserves to fly to an alternate airport 200 nm from the destination airport, hold for 30 minutes at the alternate airport, and contain 5\% contingency fuel, which is defined as 5\% of non-reserve block fuel. Furthermore, both takeoff and landing distances are restrained to 9,000 ft or less off asphalt or concrete runways including ISA + 15 degrees C. Finally, the maximum approach speed the aircraft can have is 145 KCAS at the end of the design mission. 
 
-\textbf{Prior teams split this into two subsets: required perf (what I put, essentially) and expected perf (via spreadsheet).}
+\subsection{Predicted Performance (\textit{MK})}
+First-cut analysis was performed using an estimated empty weight as well as a fuel weight calculated by using a TSFC average of contemporary large turbofan engines, such as what would be found on an aircraft of this size.  This data was then input into a time-step integration spreadsheet to converge on a first design for a bounded range for cruise. For the duration of cruise, the aircraft wll begin cruising at an altitude of FL370, where it will perform two step climbs of 3000 ft. each and end at a cruising altitude of FL430. Before and after cruise, the aircraft will follow the mission profile as stated in Section \ref{section: Conops} in Figure \hl{....}....
+
+In the future, the flight envelope as well as fuel estimation of each segment in the mission profile will be performed. Additionally, the time-step integration of cruise will be refined and the time-step integration process will be implemented for the climb, descend, and loiter segments of the mission. Further analysis will performed on determining the drag of each mission segment as well as regulating that the design stays within the requirements set forth by the RFP. 
+
+% \textcolor{red}{
+% \begin{itemize}
+%     \item Discuss performance analysis for takeoff and cruise supporting the sizing analysis.
+%     \item Discuss future work.
+%     \item AIAA: Aircraft performance summaries shall be documented and the aircraft flight envelope
+%     shall be shown graphically
+%     \item AIAA: Payload range chart(s)
+%     \item AIAA: Important aerodynamic characteristics and aerodynamic performance for key mission
+%     segments and requirements (shared w/ aero)
+% \end{itemize}}
