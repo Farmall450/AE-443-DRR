@@ -1,37 +1,39 @@
 \subsection{Comparison Analysis}
 \label{subsection: comparison}
-Using the aircraft in Table \ref{tab:trade_params}, the fidelity of the mass estimation equations found in Roskam Part 2 \cite{roskam_2}, Roskam Part 5 \cite{roskam_5}, and Raymer \cite{raymer} can be quantified. By choosing the equations which closely fit the values seen in the real aircraft from the trade study rather than equations which may over or under estimate the mass, a higher fidelity prediction of the total mass of the aircraft can be created.
+Given the preliminary geometry of the aircraft, the mass properties of the aircraft were calculated and tabulated in Table \ref{tab:mass_props}. In these calculations, the only source of equations used and analyzed came from Raymer \cite{raymer}, equations from Roskam (both Part II \cite{roskam_2} and Part V \cite{roskam_5}) are not taken into account. 
 
 \begin{table}[!h]
 \centering
-\caption{Mass Estimations of SAM MK1}
-\begin{tabular}{|p{4cm}||p{2cm}|p{3cm}| }
+\caption{Mass Estimations of SAM Mk1}
+\begin{tabular}{|p{4cm}||p{2cm}|p{4cm}| }
 \toprule
 \multicolumn{1}{|c||}{\textbf{Description}} & \multicolumn{1}{c|}{\textbf{Weight (lbs)}} &  
 \multicolumn{1}{c|}{\textbf{Equation Used}} \\ \hline \hline 
-Wing & 40,000.00 & Raymer Table 15.2 \\ \hline
-Fuselage & 61,599.00 & 25 lb/in \\ \hline
-Horizontal Stabilizer & 6,000.00 & 6 lb/sq ft \\ \hline
-Vertical Stabilizer & 2,500.00 & 5 lb/sq ft \\ \hline
-Main Landing Gear & 4,099.79 & Raymer 15.50 \\ \hline
-Nose Landing Gear & 447.51 & Raymer 15.51 \\ \hline
-Avionics & 1,332.66 & Raymer 15.57 \\ \hline
-Electrical System & 511.10 & Raymer 15.56 \\ \hline
-Anit-Icing and AC System & 4,667.79 & Raymer 15.58 \\ \hline
+Wing & 40,000 & Raymer Table 15.2 \\ \hline
+Fuselage & 61,600 & 25 lb/in (Raymer estimation) \\ \hline
+Horizontal Stabilizer & 6,000 & 6 lb/sq ft (Raymer estimation) \\ \hline
+Vertical Stabilizer & 2,500 & 5 lb/sq ft (Raymer estimation) \\ \hline
+Main Landing Gear & 4,100 & Raymer 15.50 \\ \hline
+Nose Landing Gear & 450 & Raymer 15.51 \\ \hline
+Avionics & 1,330 & Raymer 15.57 \\ \hline
+Electrical System & 510 & Raymer 15.56 \\ \hline
+Anit-Icing and AC System & 4,700 & Raymer 15.58 \\ \hline
 Engine Weight & 19,000 & Estimation \\ \hline
-\textbf{Empty Weight} & 148,099.00 &  \\ \hline
-\textbf{MTOW} & 305,099.00 &  \\ \hline
-\textbf{MZFW} & 230,099.00 &  \\ \hline
-\textbf{MLW} & 199,931.87 &  \\
+\textbf{Empty Weight} & 148,100 &  \\ \hline
+\textbf{MTOW} & 305,100 &  \\ \hline
+\textbf{MZFW} & 230,100 &  \\ \hline
+\textbf{MLW} & 200,000 &  \\
 \bottomrule
 \end{tabular}
 \label{tab:mass_props}
 \end{table}
 \FloatBarrier
 
+The CG of the aircraft was also estimated using the estimation provided by Raymer \cite{raymer}, which states the CG is roughly located at 30\% MAC from the tip of the root chord. From the computer model of the aircraft, the CG is estimated to be 1034 inches (86 feet) from the nose of the aircraft, or 1174 inches (98 feet) from the aircraft coordinate system.
+
 
 \subsection{Future Work}
-Future work includes several tasks, such as creating a parametric spreadsheet using equations found in Roskam and Raymer and key parameters from the aircraft size to estimate the center of gravity location and the weight of the aircraft. This method would provide a low fidelity estimation, but by using the best equation for each section of the aircraft as described in \ref{subsection: comparison}, a higher fidelity solution can be reached. Another method of estimating the mass properties of the aircraft would be to create a high-detailed CAD model of the aircraft, where materials are assigned to each part of the structure with enough detail such that the weight, center of gravity, and moments of inertia can be estimated via the CAD software. 
+Using the aircraft in Table \ref{tab:trade_params} and other seed aircraft, the fidelity of the mass estimation equations found in Roskam Part 2 \cite{roskam_2}, Roskam Part 5 \cite{roskam_5}, and Raymer \cite{raymer} can be quantified. By choosing the equations which closely fit the values seen in the real aircraft from the trade study rather than equations which may over or under estimate the mass, a higher fidelity prediction of the total mass of the aircraft can be created. Another method of estimating the mass properties of the aircraft would be to create a high-detailed CAD model of the aircraft, where materials are assigned to each part of the structure with enough detail such that the weight, CG, and moments of inertia can be estimated via the CAD software. 
 
 
 

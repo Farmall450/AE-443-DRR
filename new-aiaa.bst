@@ -1,4 +1,4 @@
-%%
+ %%
 %% This is file `new-aiaa.bst',
 %% generated with the docstrip utility
 %% and modified further by Overleaf for AIAA.
