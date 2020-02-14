@@ -28,22 +28,22 @@ Several SC(2)-series airfoils are compared using incompressible methods on XFLR5
 % \clearpage %-- this gets Perf to be almost perfectly on the top of a page.  Please advise. 
 
 \subsection{Wing Design}
-Initial assumptions were made for the aspect ratio of the wing design based on comparable aircraft such as the Boeing 777-200 and Boeing 787.  Consequently, a range of $\AR \in [8,12]$ was initially set.  A wing area of $5,000 \text{ ft}^2$ was recommended from the performance analysis.  Later analysis proved better range performance with a wing reference area of $4,000 \text{ ft}^2$. The modified wing dimensions are shown to the below in Table \ref{tab:wingsizing}.
+Initial assumptions were made for the aspect ratio of the wing design based on comparable aircraft such as the Boeing 777-200 and Boeing 787.  Consequently, a range of $\AR \in [8,12]$ was initially set.  A wing area of $5,000 \text{ ft}^2$ was recommended from the performance analysis.  Later analysis proved better range performance with a wing reference area of $4,000 \text{ ft}^2$. The modified wing dimensions are shown to the below in Table \ref{tab:wingsizing}.  The modified values provided a much more realistic wing span for the requirements.  Next steps involve generating the wing geometry in XFLR5 and Athena Vortex Lattice, \textit{AVL}, to determine aerodynamic characteristics in using the airfoils of interest.
 
 \begin{table}[!h]
     \centering
     \caption{Wing Dimensions}
-    \begin{tabular}{|c|c|c|} \toprule
-        \multicolumn{3}{c}{\textbf{\textcolor{cobalt}{Main Wing}}} \\ \midrule
-        \textbf{Description} & \textbf{\#} & \textbf{Units} \\ \hline \hline
-        \AR & 8.5 & $\sim$ \\ \hline
-        b (\textit{span}) & 184 & ft \\ \hline 
-        $S_{\text{wing}}$ (\textit{area}) & 4,000 & ft$^2$ \\ \hline
-        c/4 Sweep & $32$ & degree \\ \hline
-        $\lambda$ & 0.15 & $\sim$ \\ \hline
-        Chord Root & 452.72 & in \\ \hline
-        Chord Tip & 67.91 & in \\ \hline   
-        Mean Aerodynamic Chord & 307.72 & in \\ \bottomrule
+    \begin{tabular}{|c|c|c|c|} \toprule
+        \multicolumn{4}{c}{\textbf{\textcolor{cobalt}{Main Wing}}} \\ \midrule
+        \textbf{Description} & \textbf{Initial \#} & \textbf{Modified \#} & \textbf{Units} \\ \hline \hline
+        \AR & 9.0 & 8.5 & $\sim$ \\ \hline
+        b (\textit{span}) & 212 & 184 & ft \\ \hline 
+        $S_{\text{wing}}$ (\textit{area}) & 5,000 & 4,000 & ft$^2$ \\ \hline
+        c/4 Sweep & 30 & $32$ & degree \\ \hline
+        $\lambda$ & 0.18 & 0.15 & $\sim$ \\ \hline
+        Chord Root & 479.39 & 452.72 & in \\ \hline
+        Chord Tip & 86.29 & 67.91 & in \\ \hline   
+        Mean Aerodynamic Chord & 328.37 & 307.72 & in \\ \bottomrule
     \end{tabular}
     \label{tab:wingsizing}
 \end{table}

@@ -2,10 +2,12 @@
 
 \usepackage{amsmath,amssymb}
 \usepackage{booktabs}
+\usepackage{comment}
 \usepackage{fancyhdr}
 \usepackage{float}
 \usepackage{etoolbox}
 \usepackage{gensymb,graphicx}
+\usepackage{hyperref}
 \usepackage{longtable}
 \usepackage{mathpazo} % Palatino font
 \usepackage{placeins}
@@ -14,6 +16,7 @@
 \usepackage{soul}
 \usepackage[table]{xcolor}
 \usepackage{tabto,tabu,tabularx}
+\usepackage[titles]{tocloft}
 \usepackage{trimclip}
 \usepackage[utf8]{inputenc}
 \usepackage[version=4]{mhchem}
@@ -26,7 +29,14 @@
 \fancyhf{}
 \cfoot{\thepage}
 
+% Fixes Table of Contents to not have text running into each other
+\renewcommand*\cftsecnumwidth{2.5em}
+\renewcommand*\cftsubsecnumwidth{3em}
+\renewcommand*\cftsubsubsecnumwidth{4em}
+% - - - - -
+
 \renewcommand{\contentsname}{Table of Contents (\textit{JC})}
+
 \captionsetup{font=bf}
 \hypersetup{
      colorlinks = true,
@@ -37,26 +47,18 @@
      urlcolor = blue
      }
 \definecolor{cobalt}{rgb}{0.0, 0.28, 0.67}
+
+% Define Aspect Ratio symbol as \AR
 \def\AR{\clipbox{0pt 0pt .32em 0pt}\AE\kern-.30emR}
 
 % Can add packages:
 % \usepackage{amsmath,amssymb,amsthm,array}
 % \usepackage[bottom]{footmisc}
-% % \usepackage{caption,color}
-% \usepackage[english]{babel}
+% \usepackage{caption,color}
 % \usepackage{enumitem}
-% \usepackage{etoolbox}
-% \usepackage{fancyhdr}
-% \usepackage{hyperref}
-% \usepackage{lastpage,longtable}
+% \usepackage{lastpage}
 % \usepackage{newtxtext,newtxmath}
 % \usepackage{rotating}
-% \usepackage{setspace} \doublespacing
-% \usepackage{siunitx,subcaption}
-% \usepackage{tabto,tabu,tabularx}
-% \usepackage[utf8]{inputenc}
-% \usepackage{xcolor}
-% % \usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
 
 
 % \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -75,23 +77,16 @@
 
 
 % % \usepackage{fullpage}
-% % \usepackage[top=2cm, bottom=4.5cm, left=2.5cm, right=2.5cm]{geometry}
 % % \usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
 % % \usepackage{lastpage}
 % % \usepackage{enumerate}
-% % \usepackage{fancyhdr}
 % % \usepackage{mathrsfs}
-% % \usepackage{xcolor}
 % % \usepackage{setspace}
-% % \usepackage{graphicx}
 % % \usepackage{listings}
-% % \usepackage{hyperref}
 % % \usepackage{enumitem}
 % % \usepackage{float}
-% % \usepackage{wrapfig}
 % % \usepackage{fancyvrb}
 % % \usepackage{booktabs}
-% % \usepackage[T1]{fontenc}
 % % \usepackage[numbered,framed]{matlab-prettifier}
 % % \hypersetup{%
 % %   colorlinks=true,
