@@ -1,5 +1,5 @@
 \subsection{Airfoil Analysis}
-The desired cruise conditions of Mach $= 0.9$ for the aircraft fall within transonic speed regime.  This provides favorable conditions for the sizing analysis but increases the effects of wave drag.
+The desired cruise conditions of Mach $= 0.9$ for the aircraft fall within the transonic speed regime.  This provides favorable conditions for the sizing analysis but increases the effects of wave drag.
 
 \begin{wrapfigure}{r}{0.5\textwidth}
     \vspace{-0.25in}
@@ -25,11 +25,10 @@ As shown above in Figure \ref{fig:transonic}, there is an increase in wave drag 
 \end{table}
 
 Several SC(2)-series airfoils are compared using incompressible methods on XFLR5.  These methods do not offer accurate analysis of the fluid behavior at transonic cruise conditions but provides initial guidance as to selecting an airfoil.
-\clearpage
-\subsection{Wing Design}
-Initial assumptions were made for the aspect ratio of the wing design based on comparable aircraft such as the Boeing 777-200 and Boeing 787.  Consequently, a range of $\AR \in [8,12]$ was initially set.  A wing area of $5,000 \text{ ft}^2$ was recommended from the performance analysis.  Later analysis proved better range performance with a wing reference area of $4,000 \text{ ft}^2$. 
+% \clearpage %-- this gets Perf to be almost perfectly on the top of a page.  Please advise. 
 
-The modified wing dimensions are shown to the below in Table \ref{tab:wingsizing}.
+\subsection{Wing Design}
+Initial assumptions were made for the aspect ratio of the wing design based on comparable aircraft such as the Boeing 777-200 and Boeing 787.  Consequently, a range of $\AR \in [8,12]$ was initially set.  A wing area of $5,000 \text{ ft}^2$ was recommended from the performance analysis.  Later analysis proved better range performance with a wing reference area of $4,000 \text{ ft}^2$. The modified wing dimensions are shown to the below in Table \ref{tab:wingsizing}.
 
 \begin{table}[!h]
     \centering
@@ -64,11 +63,8 @@ High-lift devices are implemented on Sam Mark I to improve aircraft stability du
 \subsection{Future Progress}
 Several key topics are under active investigation to improve the aircraft performance. The following will be further investigated for the Preliminary Design Report:
 \begin{itemize}
-    \item Complete Drag Buildup
-    \begin{itemize}
-        \item Wave Drag prediction
-    \end{itemize}
-    \item High lift devices during Take-off/Landing, Lift-Drag Polar, and Impact of flaps and slats on aircraft stability
+    \item Complete Drag Buildup (Major focus on Wave drag prediction)
+    \item High lift devices during Take-off/Landing, Lift-Drag Polar, and impact of flaps and slats on aircraft stability
     \item XFLR5 Analysis of Supercritical Airfoils to determine desired airfoil
     \item Wing geometry with airfoil design
     \item CFD analysis of complete wing and body system
