@@ -40,7 +40,7 @@ In Table \ref{tab:pugh_structures}, the benefits and costs for each build-up con
 \begin{table}[!h]
 \centering
 \caption{Pugh Matrix for Structures Material Selection}
-\begin{tabular}{|p{3.5cm}||p{3cm}|p{2cm}|p{2cm}|p{2cm}| }
+\begin{tabular}{|p{3.5cm}||p{2cm}|p{2cm}|p{2cm}|p{2cm}| }
 \toprule
 \multicolumn{1}{|c||}{\textbf{Criteria}} & \multicolumn{1}{c|}{\textbf{Weight}} &  
 \multicolumn{1}{c|}{\textbf{Metallic}} & \multicolumn{1}{c|}{\textbf{Composite}} & \multicolumn{1}{c|}{\textbf{Hybrid}} \\ \hline \hline 
@@ -67,6 +67,7 @@ Since composite layups are essentially an additive manufacturing technique, the 
 
 Spars are the most important structure to the wings, and arguably the most important on the entire aircraft. These few parts make the entire aircraft fly, and in the process, see a lot of loading cycles over the life of the aircraft. In metal structures, loading cycles cause fatiguing, and then fatigue cracking, which degrades the structure. Traditionally, metallic structures use a 3-piece build-up for the spar: chord on the top and bottom, and a web connecting the two chords. This structure ends-up looking like a C-channel extrusion. The reason the spars are a 3-piece build-up comes down to crack growth and fatigue. A crack starts in the lower chord, but cannot grow through the entire spar since the chord is connected to the web by fasteners. There are a few aircraft that have used a one-piece, or monolithic, metallic spar, some being the Boeing 1-B and the Airbus 320 NEO. There is significant research in learning crack-growth patterns and predicting where cracks will start and grow; opening-up huge possibilities in reducing manufacturing costs by allowing optimized metallic spars to be utilized on low-cost aircraft.
 
+\newpage
 The spars are where composites differ greatly from traditional 3-piece spar construction. Since composite structures do not crack like metal structures when fatigued, a monolithic spar can be utilized. This spar construction reduces costs, but increases the weight due to a thicker layup compared to a simpler 3-piece construction. Due to weight and cost savings, a monolithic composite spar may be the best option. Future work is needed to compare the different spar construction methods.
 
 Ribs in the wings are traditionally multi-piece substructures comprised of machined aluminum parts. The benefit to using aluminum ribs in the wing comes from the fact that composites are difficult to utilize on very complex and dramatic geometry. Due to this fact, a metallic rib layout would minimize costs. In an effort to save more cost and manufacturing troubles, a monolithic rib structure, with the rib posts, chords, webs, and pads machined from a single billet of aluminum, can be investigated. Ribs in the stabilizers are typically not as complex as a rib in the wings due to the lower-loaded structure. In the stabilizers, composite ribs may be utilized for weight savings.
@@ -82,16 +83,8 @@ The "drop-in" method refers to dropping the fuselage into the space made by the 
 
 Given that the aircraft is a wide-body, large wingspan structure, a bolt-on method would be preferred, as the manufacturing and logistical challenges in a "drop-in" method are costly.
 
-\subsubsection{Future Work (\textit{CE}}
-Future work includes: 
-
-\begin{itemize}
-    \item Create a CAD model of the aircraft given the key parameters from the sizing iterations
-    \item Create semi-detailed structure in the wing, stabilizers, and fuselage
-    \item Complete hand-calculations for basic beam-bending analysis of the wing under flight conditions
-    \item Complete higher fidelity FEM analysisof the model, particularly the wing during cruise
-\end{itemize}
-
+\subsubsection{Future Work for Structures (\textit{CE})}
+Future work includes several key tasks. First item to tackle is the creation of the full CAD model of the aircraft. With the full model, FEA can be completed on the wing and/or fuselage structure. In the CAD model, the wing structure will have a higher detail than the fuselage sections, mainly due to the importance of the analysis of the wing. Second, simple hand calculations of the wing must be done in order to size the spars and stringers. Finally, structure sizing can be somewhat optimized via the higher fidelity FEA from the full CAD model.
 
 \subsection{Loads (\textit{MK})}
 
@@ -99,7 +92,7 @@ One important aspect in the structural analysis of the aircraft is determining t
 
 \begin{figure}[H]
     \centering
-    \includegraphics{Photos/VN_Diagram_(2-11-20).png}
+    \includegraphics[width=\linewidth]{Photos/VN_Diagram_(2-11-20).png}
     \caption{VN Diagram of Limit Load Factors}
     \label{figVN}
 \end{figure}
